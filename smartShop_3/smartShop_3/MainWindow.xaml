@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:smartShop_3"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
     <Window.Resources>
+        <!--button style-->
         <Style x:Key="RoundedButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#D2C7F5"/>
             <Setter Property="BorderBrush" Value="#10000000"/>
@@ -38,6 +40,58 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <!--textbox style-->
+        <Style x:Key="RoundedTextBoxWithDynamicPlaceholderStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#D2C7F5"/>
+            <Setter Property="BorderBrush" Value="#10000000"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="25"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                  Margin="10,0"
+                                  VerticalAlignment="Center"/>
+
+                            <!-- Placeholder -->
+                            <TextBlock x:Name="PlaceholderTextBlock"
+                               Text="{TemplateBinding Tag}"
+                               Foreground="White"
+                               FontSize="18"
+                               Margin="15,0"
+                               VerticalAlignment="Center"
+                               IsHitTestVisible="False"
+                               Visibility="Visible"/>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PlaceholderTextBlock" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PlaceholderTextBlock" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PlaceholderTextBlock" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter TargetName="PlaceholderTextBlock" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--effect shadow-->
         <DropShadowEffect x:Key="CommonShadow" 
             Color="#09000000" 
             BlurRadius="10" 
@@ -55,6 +109,7 @@
             <ColumnDefinition Width=".25*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <!--Chap tomon-->
         <Border  CornerRadius="0 100 100 0" Width="Auto" Height="Auto" Effect="{StaticResource CommonShadow}">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -97,15 +152,11 @@
                 </Border>
                 <!--Tugagan mahsulot border-->
                 <Border Grid.Row="2">
-                    <Border Margin="15" CornerRadius="30" BorderThickness="1" BorderBrush="#15000000" >
-
-                    </Border>
+                    <Button Content="Tugagan mahsulot" Style="{DynamicResource RoundedButtonStyle}" Margin="10" BorderThickness="0" Effect="{StaticResource CommonShadow}"/>
                 </Border>
                 <!--Kam qolgan mahsulot border-->
                 <Border Grid.Row="3">
-                    <Border Margin="15" CornerRadius="30" BorderThickness="1" BorderBrush="#15000000" >
-
-                    </Border>
+                    <Button Content="Kam qolgan mahsulot" Style="{DynamicResource RoundedButtonStyle}" Margin="10" BorderThickness="0" Effect="{StaticResource CommonShadow}"/>
                 </Border>
                 <Border BorderThickness="1" CornerRadius="0 0 100 0" Grid.Row="4">
 
@@ -113,16 +164,44 @@
             </Grid>
 
         </Border>
+        <!--O'ng tomon-->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height=".35*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <!--Mahsulot qo'shish bo'limi-->
             <Border Background="#9A9AFF" Margin="30 10" CornerRadius="50">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".50*"/>
+                        <RowDefinition Height=".50*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*"/>
+                        <ColumnDefinition Width=".25*"/>
+                        <ColumnDefinition Width=".25*"/>
+                        <ColumnDefinition Width=".25*"/>
+                        <ColumnDefinition Width=".25*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="30" Margin="30 20" Foreground="#ffffff">
+                        Maxsulot qo'shish
+                    </TextBlock>
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Nomi" Grid.Row="1" Width="auto" Height="auto" Margin="30">
+                        
+                    </TextBox>
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Kelish narxi" Grid.Row="1" Grid.Column="1" Width="auto" Height="auto" Margin="30">
 
-                <TextBlock FontSize="30" Margin="30 20" Foreground="#ffffff">
-                    Maxsulot qo'shish
-                </TextBlock>
+                    </TextBox>
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Sotish narxi" Grid.Row="1" Grid.Column="2" Width="auto" Height="auto" Margin="30">
+
+                    </TextBox>
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Soni" Grid.Row="1" Grid.Column="3" Width="auto" Height="auto" Margin="30">
+
+                    </TextBox>
+                    
+                </Grid>
+                
             </Border>
             <Border Background="DarkOrange" Grid.Row="1" Margin="30 10">
             </Border>
