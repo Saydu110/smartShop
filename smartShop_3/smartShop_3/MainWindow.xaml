@@ -7,7 +7,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow"
-        ResizeMode="CanMinimize"
+        
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
     <Window.Resources>
@@ -127,7 +127,7 @@
                 </Grid.RowDefinitions>
                 <!-- logo border -->
                 <Border CornerRadius="0 100 0 0">
-                    <Border CornerRadius="50" Width="120" Height="120" Effect="{StaticResource CommonShadow}">
+                    <Border CornerRadius="50" Width="150" Height="150" Effect="{StaticResource CommonShadow}">
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                                 <GradientStop Color="#FFBCBCFC" Offset="0"/>
@@ -148,7 +148,7 @@
                 </Border>
                 <!--Hisobot border-->
                 <Border  Grid.Row="1">
-                    <Button Content="Dinamik tugma" Style="{DynamicResource RoundedButtonStyle}" Margin="10" BorderThickness="0" Effect="{StaticResource CommonShadow}"/>
+                    <Button Content="Hisobot" Style="{DynamicResource RoundedButtonStyle}" Margin="10" BorderThickness="0" Effect="{StaticResource CommonShadow}"/>
                 </Border>
                 <!--Tugagan mahsulot border-->
                 <Border Grid.Row="2">
@@ -158,9 +158,7 @@
                 <Border Grid.Row="3">
                     <Button Content="Kam qolgan mahsulot" Style="{DynamicResource RoundedButtonStyle}" Margin="10" BorderThickness="0" Effect="{StaticResource CommonShadow}"/>
                 </Border>
-                <Border BorderThickness="1" CornerRadius="0 0 100 0" Grid.Row="4">
-
-                </Border>
+                
             </Grid>
 
         </Border>
@@ -187,23 +185,32 @@
                     <TextBlock FontSize="30" Margin="30 20" Foreground="#ffffff">
                         Maxsulot qo'shish
                     </TextBlock>
-                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Nomi" Grid.Row="1" Width="auto" Height="auto" Margin="30">
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Nomi" Grid.Row="1" Width="auto" Height="auto" Margin="30" Effect="{StaticResource CommonShadow}">
                         
                     </TextBox>
-                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Kelish narxi" Grid.Row="1" Grid.Column="1" Width="auto" Height="auto" Margin="30">
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Kelish narxi" Grid.Row="1" Grid.Column="1" Width="auto" Height="auto" Margin="30" Effect="{StaticResource CommonShadow}">
 
                     </TextBox>
-                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Sotish narxi" Grid.Row="1" Grid.Column="2" Width="auto" Height="auto" Margin="30">
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Sotish narxi" Grid.Row="1" Grid.Column="2" Width="auto" Height="auto" Margin="30" Effect="{StaticResource CommonShadow}">
 
                     </TextBox>
-                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Soni" Grid.Row="1" Grid.Column="3" Width="auto" Height="auto" Margin="30">
+                    <TextBox Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Soni" Grid.Row="1" Grid.Column="3" Width="auto" Height="auto" Margin="30" Effect="{StaticResource CommonShadow}">
 
                     </TextBox>
+                    <Button Content="Saqlash" Background="#112D53" Style="{DynamicResource RoundedButtonStyle}" Margin="30" Grid.Row="1" Grid.Column="4" Effect="{StaticResource CommonShadow}"/>
                     
                 </Grid>
                 
             </Border>
-            <Border Background="DarkOrange" Grid.Row="1" Margin="30 10">
+            <!--Database ko'rish qismi-->
+            <Border  Grid.Row="1" Margin="30 10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                </Grid>
             </Border>
         </Grid>
     </Grid>
