@@ -203,14 +203,20 @@
                 
             </Border>
             <!--Database ko'rish qismi-->
-            <Border  Grid.Row="1" Margin="30 10">
+            <Border Background="Yellow" Grid.Row="1" Margin="30 10">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height=".10*"/>
+                        <RowDefinition Height=".15*"/>
+                        <RowDefinition Height=".75*"/>
                     </Grid.RowDefinitions>
+
+                    <Border BorderBrush="Aqua" BorderThickness="2">
+                        
+                    </Border>
                 </Grid>
+                
+                
             </Border>
         </Grid>
     </Grid>
