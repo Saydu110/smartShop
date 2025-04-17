@@ -212,7 +212,15 @@
                     </Grid.RowDefinitions>
 
                     <Border BorderBrush="Aqua" BorderThickness="2">
-                        
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".25*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Saqlash" Background="#112D53" Style="{DynamicResource RoundedButtonStyle}" Margin="5"  Effect="{StaticResource CommonShadow}"/>
+
+                        </Grid>
+
                     </Border>
                 </Grid>
                 
