@@ -203,25 +203,35 @@
                 
             </Border>
             <!--Database ko'rish qismi-->
-            <Border Background="Yellow" Grid.Row="1" Margin="30 10">
+            <Border Grid.Row="1" Margin="30 10">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height=".10*"/>
                         <RowDefinition Height=".15*"/>
                         <RowDefinition Height=".75*"/>
                     </Grid.RowDefinitions>
-
-                    <Border BorderBrush="Aqua" BorderThickness="2">
+                     <!--Nowbar of Database-->
+                    <Border>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width=".25*"/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width=".20*"/>
+                                <ColumnDefinition Width=".40*"/>
+                                <ColumnDefinition Width=".40*"/>
                             </Grid.ColumnDefinitions>
-                            <Button Content="Saqlash" Background="#112D53" Style="{DynamicResource RoundedButtonStyle}" Margin="5"  Effect="{StaticResource CommonShadow}"/>
+                            <Button Background="#112D53" Style="{DynamicResource RoundedButtonStyle}" Margin="0,5,5,5"  Effect="{StaticResource CommonShadow}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/assets/cart.png"/>
+                                    <TextBlock Text="SAVAT"/>
+                                </StackPanel>
+                            </Button>
+                            <TextBox Grid.Column="2" Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Search..." Width="auto" Height="auto" Margin="0,5,5,5" Effect="{StaticResource CommonShadow}">
+
+                            </TextBox>
 
                         </Grid>
 
                     </Border>
+                    
                 </Grid>
                 
                 
