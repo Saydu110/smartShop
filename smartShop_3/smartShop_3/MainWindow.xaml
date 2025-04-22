@@ -40,6 +40,35 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <!--button style 2-->
+        <Style x:Key="RoundedButtonStyle2" TargetType="Button">
+            <Setter Property="Background" Value="#D2C7F5"/>
+            <Setter Property="BorderBrush" Value="#10000000"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="25">
+                            <ContentPresenter 
+                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <!--textbox style-->
         <Style x:Key="RoundedTextBoxWithDynamicPlaceholderStyle" TargetType="TextBox">
             <Setter Property="Background" Value="#D2C7F5"/>
@@ -218,13 +247,21 @@
                                 <ColumnDefinition Width=".40*"/>
                                 <ColumnDefinition Width=".40*"/>
                             </Grid.ColumnDefinitions>
-                            <Button Background="#112D53" Style="{DynamicResource RoundedButtonStyle}" Margin="0,5,5,5"  Effect="{StaticResource CommonShadow}">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="/assets/cart.png"/>
-                                    <TextBlock Text="SAVAT"/>
-                                </StackPanel>
+                            <Button Background="#112D53" Style="{DynamicResource RoundedButtonStyle2}" Margin="0,5,5,5"  Effect="{StaticResource CommonShadow}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".60*" />
+                                        <ColumnDefinition Width=".40*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0">
+                                        <TextBlock Text="    Savat" VerticalAlignment="Center" Margin="5"/>
+                                    </Border>
+                                    <Border  Grid.Column="1">
+                                        <Image Margin="10" Source="/assets/cart.png"/>
+                                    </Border>
+                                </Grid>
                             </Button>
-                            <TextBox Grid.Column="2" Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Search..." Width="auto" Height="auto" Margin="0,5,5,5" Effect="{StaticResource CommonShadow}">
+                            <TextBox Grid.Column="2"  Style="{StaticResource RoundedTextBoxWithDynamicPlaceholderStyle}" Tag="Search..." Width="auto" Height="auto" Margin="0,5,5,5" Effect="{StaticResource CommonShadow}">
 
                             </TextBox>
 
