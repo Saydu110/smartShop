@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Github_project\\smartShop\\smartShop_3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBDBA2B1-2790-448B-AC5C-C8E53A7C8BC7}|smartShop_3\\smartShop_3.csproj|c:\\github_project\\smartshop\\smartshop_3\\smartshop_3\\mymodalwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FBDBA2B1-2790-448B-AC5C-C8E53A7C8BC7}|smartShop_3\\smartShop_3.csproj|solutionrelative:smartshop_3\\mymodalwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBDBA2B1-2790-448B-AC5C-C8E53A7C8BC7}|smartShop_3\\smartShop_3.csproj|c:\\github_project\\smartshop\\smartshop_3\\smartshop_3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FBDBA2B1-2790-448B-AC5C-C8E53A7C8BC7}|smartShop_3\\smartShop_3.csproj|solutionrelative:smartshop_3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -23,26 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MyModalWindow.xaml",
+              "DocumentMoniker": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MyModalWindow.xaml",
+              "RelativeDocumentMoniker": "smartShop_3\\MyModalWindow.xaml",
+              "ToolTip": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MyModalWindow.xaml*",
+              "RelativeToolTip": "smartShop_3\\MyModalWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-23T06:52:18.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MainWindow.xaml",
               "RelativeDocumentMoniker": "smartShop_3\\MainWindow.xaml",
-              "ToolTip": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MainWindow.xaml*",
-              "RelativeToolTip": "smartShop_3\\MainWindow.xaml*",
+              "ToolTip": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MainWindow.xaml",
+              "RelativeToolTip": "smartShop_3\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-13T13:12:34.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "smartShop_3\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Github_project\\smartShop\\smartShop_3\\smartShop_3\\MainWindow.xaml.cs",
               "RelativeToolTip": "smartShop_3\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:12:32.672Z"
+              "WhenOpened": "2025-04-13T13:12:32.672Z",
+              "EditorCaption": ""
             }
           ]
         }

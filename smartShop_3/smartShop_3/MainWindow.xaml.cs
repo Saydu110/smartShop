@@ -20,4 +20,11 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+    // open modal window
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+        MyModalWindow modal = new MyModalWindow();
+        modal.Owner = this; // Asosiy oynani owner qilish (tavsiya etiladi)
+        modal.ShowDialog(); // Modal tarzda ochiladi
+    }
 }

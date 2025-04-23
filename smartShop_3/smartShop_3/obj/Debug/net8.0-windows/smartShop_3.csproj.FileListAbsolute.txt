@@ -19,3 +19,5 @@ C:\Github_project\smartShop\smartShop_3\smartShop_3\obj\Debug\net8.0-windows\sma
 C:\Github_project\smartShop\smartShop_3\smartShop_3\obj\Debug\net8.0-windows\smartShop_3.genruntimeconfig.cache
 C:\Github_project\smartShop\smartShop_3\smartShop_3\obj\Debug\net8.0-windows\ref\smartShop_3.dll
 C:\Github_project\smartShop\smartShop_3\smartShop_3\obj\Debug\net8.0-windows\smartShop_3.sourcelink.json
+C:\Github_project\smartShop\smartShop_3\smartShop_3\obj\Debug\net8.0-windows\MyModalWindow.g.cs
+C:\Github_project\smartShop\smartShop_3\smartShop_3\obj\Debug\net8.0-windows\MyModalWindow.baml

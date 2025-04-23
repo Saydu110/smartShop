@@ -247,7 +247,7 @@
                                 <ColumnDefinition Width=".40*"/>
                                 <ColumnDefinition Width=".40*"/>
                             </Grid.ColumnDefinitions>
-                            <Button Background="#112D53" Style="{DynamicResource RoundedButtonStyle2}" Margin="0,5,5,5"  Effect="{StaticResource CommonShadow}">
+                            <Button Click="Button_Click" Background="#112D53" Style="{DynamicResource RoundedButtonStyle2}" Margin="0,5,5,5"  Effect="{StaticResource CommonShadow}">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width=".60*" />
